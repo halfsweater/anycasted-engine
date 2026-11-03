@@ -1,0 +1,5 @@
+[16:22:18 ERROR]: Exception loading chunk [12, -8]
+java.util.zip.DataFormatException: invalid distance too far back
+    at java.base/java.util.zip.Inflater.inflateBytesBytes(Native Method)
+    at net.minecraft.world.level.chunk.storage.RegionFileStorage.read(RegionFileStorage.java:192)
+[16:22:18 WARN]: Failed to read chunk [12, -8] in world 'survival'

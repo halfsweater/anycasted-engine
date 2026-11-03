@@ -1,0 +1,27 @@
+[12:00:00] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Booting up Velocity 3.3.0-SNAPSHOT (git-71746fb2-b416)...
+[12:00:00] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading localizations...
+[12:00:01] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Connections will use epoll channels, libdeflate (Linux x86_64) compression, OpenSSL 1.1.x (Linux x86_64) ciphers
+[12:00:01] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loading plugins...
+[12:00:01] [main/ERROR] [com.velocitypowered.proxy.plugin.VelocityPluginManager]: Can't load plugin chatbridge due to missing dependency signedvelocity
+[12:00:02] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded plugin luckperms 5.4.102 by Luck
+[12:00:02] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Loaded 1 plugins
+[12:00:02] [main/INFO] [luckperms]: Loading configuration...
+[12:00:03] [main/INFO] [com.velocitypowered.proxy.network.ConnectionManager]: Listening on /[0:0:0:0:0:0:0:0%0]:25577
+[12:00:03] [main/INFO] [com.velocitypowered.proxy.VelocityServer]: Done (2.84s)!
+[12:05:10] [Netty epoll Worker #2/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Steve (/198.51.100.4:52311): unable to connect to server lobby
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /10.0.0.5:25566
+Caused by: java.net.ConnectException: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.3.0-SNAPSHOT-416.jar:3.3.0-SNAPSHOT (git-71746fb2-b416)]
+	at java.base/java.lang.Thread.run(Thread.java:1583) [?:?]
+[12:05:30] [Netty epoll Worker #3/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Alex (/198.51.100.9:50001): unable to connect to server lobby
+io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: /10.0.0.5:25566
+Caused by: java.net.ConnectException: Connection refused
+	at io.netty.channel.unix.Errors.newConnectException0(Errors.java:166) ~[velocity-3.3.0-SNAPSHOT-416.jar:3.3.0-SNAPSHOT (git-71746fb2-b416)]
+[12:06:00] [Netty epoll Worker #1/INFO] [com.velocitypowered.proxy.connection.client.ConnectedPlayer]: [connected player] Steve (/198.51.100.4:52400) has disconnected: Timed out
+[12:07:00] [Netty epoll Worker #4/ERROR] [com.velocitypowered.proxy.connection.backend.BackendPlaySessionHandler]: [server connection] Notch -> survival: Your server didn't send a forwarding request. Unable to verify player details.
+[12:08:00] [luckperms-worker-1/WARN] [luckperms]: Unable to connect to the messaging service
+java.net.UnknownHostException: redis.internal.example: Name or service not known
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[?:?]
+	at me.lucko.luckperms.lib.redis.Connection.open(Connection.java:22) ~[luckperms-velocity-5.4.102.jar:?]
+[12:30:00] [Velocity Shutdown Thread/INFO] [com.velocitypowered.proxy.VelocityServer]: Shutting down the proxy...
+[12:30:00] [Velocity Shutdown Thread/INFO] [com.velocitypowered.proxy.VelocityServer]: Closing endpoint /[0:0:0:0:0:0:0:0%0]:25577

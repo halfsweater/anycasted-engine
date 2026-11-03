@@ -1,0 +1,16 @@
+[package]
+name = "anycasted-detection"
+description = "Deterministic, rule-based detection for Minecraft server diagnostics"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+anycasted-core.workspace = true
+regex.workspace = true
+aho-corasick.workspace = true
+
+[lints]
+workspace = true

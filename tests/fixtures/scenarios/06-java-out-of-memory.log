@@ -1,0 +1,5 @@
+[03:17:44 ERROR]: Encountered an unexpected exception
+java.lang.OutOfMemoryError: Java heap space
+    at it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap.rehash(Object2ObjectOpenHashMap.java:1234)
+    at net.minecraft.server.level.ChunkMap.updateChunkScheduling(ChunkMap.java:812)
+[03:17:44 ERROR]: This crash report has been saved to: ./crash-reports/crash-2026-11-03_03.17.44-server.txt

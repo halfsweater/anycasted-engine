@@ -1,0 +1,6 @@
+[19:42:11 ERROR]: Could not pass event PlayerJoinEvent to WelcomePlus v2.1.0
+java.lang.NullPointerException: Cannot invoke "net.milkbowl.vault.chat.Chat.getPlayerPrefix(org.bukkit.OfflinePlayer)" because "this.chat" is null
+    at me.example.welcomeplus.JoinListener.onJoin(JoinListener.java:47) ~[WelcomePlus-2.1.0.jar:?]
+    at org.bukkit.plugin.SimplePluginManager.callEvent(SimplePluginManager.java:628) ~[paper-api-1.21.1-R0.1-SNAPSHOT.jar:?]
+    at net.minecraft.server.players.PlayerList.placeNewPlayer(PlayerList.java:315) ~[paper-1.21.1.jar:1.21.1-123]
+[19:42:11 INFO]: Player123 joined the game

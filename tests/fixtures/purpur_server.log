@@ -1,0 +1,36 @@
+[08:00:00 INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.3+9-LTS; Eclipse Adoptium Temurin-21.0.3+9) on Linux 5.15.0-105-generic (amd64)
+[08:00:02 INFO]: Starting minecraft server version 1.20.6
+[08:00:02 INFO]: This server is running Purpur version 1.20.6-2233-ver/1.20.6@6ad0d1a (2024-06-17T00:00:00Z) (Implementing API version 1.20.6-R0.1-SNAPSHOT)
+[08:00:03 INFO]: [Shop] Loading server plugin Shop v4.2.0
+[08:00:04 INFO]: [Shop] Enabling Shop v4.2.0
+[08:00:04 ERROR]: Cannot load plugins/Shop/config.yml
+org.bukkit.configuration.InvalidConfigurationException: while scanning a simple key
+ in 'string', line 14, column 1:
+    prices:
+    ^
+could not find expected ':'
+ in 'string', line 15, column 1:
+	at org.bukkit.configuration.file.YamlConfiguration.loadFromString(YamlConfiguration.java:111) ~[purpur-api-1.20.6-R0.1-SNAPSHOT.jar:?]
+	at com.example.shop.Shop.onEnable(Shop.java:40) ~[Shop-4.2.0.jar:?]
+Caused by: org.yaml.snakeyaml.scanner.ScannerException: while scanning a simple key
+	at org.yaml.snakeyaml.scanner.ScannerImpl.stalePossibleSimpleKeys(ScannerImpl.java:465) ~[snakeyaml-2.2.jar:?]
+	... 12 more
+[08:00:06 INFO]: Done (5.031s)! For help, type "help"
+[08:30:12 WARN]: Can't keep up! Is the server overloaded? Running 5034ms or 100 ticks behind
+[08:31:40 WARN]: Can't keep up! Is the server overloaded? Running 2210ms or 44 ticks behind
+[08:32:00 ERROR]: [Shop] Plugin Shop v4.2.0 generated an exception while executing task 1937
+java.util.ConcurrentModificationException: null
+	at java.base/java.util.HashMap$HashIterator.nextNode(HashMap.java:1605) ~[?:?]
+	at com.example.shop.PriceUpdater.run(PriceUpdater.java:77) ~[Shop-4.2.0.jar:?]
+	at org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:78) ~[purpur-1.20.6.jar:git-Purpur-2233]
+[08:33:05 ERROR]: ------------------------------
+[08:33:05 ERROR]: The server has not responded for 10 seconds! Creating thread dump
+[08:33:05 ERROR]: ------------------------------
+[08:33:05 ERROR]: Server thread dump (Look for plugins here before reporting to Purpur!):
+[08:33:05 ERROR]: ------------------------------
+[08:33:05 ERROR]: Current Thread: Server thread
+[08:33:05 ERROR]: 	PID: 28 | Suspended: false | Native: false | State: RUNNABLE
+[08:33:05 ERROR]: 	Stack:
+[08:33:05 ERROR]: 		com.example.shop.PriceUpdater.recalculate(PriceUpdater.java:120)
+[08:40:00 INFO]: Stopping server
+[08:40:00 INFO]: [Shop] Disabling Shop v4.2.0

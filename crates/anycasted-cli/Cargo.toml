@@ -1,0 +1,23 @@
+[package]
+name = "anycasted-cli"
+description = "Command-line interface for the Anycasted Diagnostics Engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "anycasted"
+path = "src/main.rs"
+
+[dependencies]
+anycasted-engine.workspace = true
+clap.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+serde = { workspace = true }
+serde_json.workspace = true
+
+[lints]
+workspace = true

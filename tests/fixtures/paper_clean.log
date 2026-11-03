@@ -1,0 +1,52 @@
+[09:59:58] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.2+13-LTS; Eclipse Adoptium Temurin-21.0.2+13) on Linux 6.1.0-18-amd64 (amd64)
+[09:59:58] [ServerMain/INFO]: [bootstrap] Loading Paper 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) for Minecraft 1.20.4
+[09:59:59] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[10:00:00] [ServerMain/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[10:00:02] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:00:03] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[10:00:03] [Server thread/INFO]: Loading properties
+[10:00:03] [Server thread/INFO]: This server is running Paper version 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) (Implementing API version 1.20.4-R0.1-SNAPSHOT)
+[10:00:03] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:00:03] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:00:04] [Server thread/INFO]: Default game type: SURVIVAL
+[10:00:04] [Server thread/INFO]: Generating keypair
+[10:00:04] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:00:04] [Server thread/INFO]: Using epoll channel type
+[10:00:05] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.102
+[10:00:05] [Server thread/INFO]:         __    
+[10:00:05] [Server thread/INFO]:   |    |__)   LuckPerms v5.4.102
+[10:00:05] [Server thread/INFO]:   |___ |      Running on Bukkit - Paper
+[10:00:05] [Server thread/INFO]: [ErrorLogger] Loading server plugin ErrorLogger v1.0.0
+[10:00:05] [Server thread/INFO]: [Essentials] Loading server plugin Essentials v2.20.1
+[10:00:05] [Server thread/INFO]: Server permissions file permissions.yml is empty, ignoring it
+[10:00:06] [Server thread/INFO]: Preparing level "world"
+[10:00:08] [Server thread/INFO]: Preparing start region for dimension minecraft:overworld
+[10:00:09] [Server thread/INFO]: Time elapsed: 1203 ms
+[10:00:09] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.102
+[10:00:09] [Server thread/INFO]: [ErrorLogger] Enabling ErrorLogger v1.0.0
+[10:00:09] [Server thread/INFO]: [ErrorLogger] Watching for errors: 0 errors recorded so far
+[10:00:09] [Server thread/INFO]: [Essentials] Enabling Essentials v2.20.1
+[10:00:10] [Server thread/INFO]: Done (7.712s)! For help, type "help"
+[10:00:10] [Server thread/INFO]: Timings Reset
+[10:03:11] [User Authenticator #0/INFO]: UUID of player Steve is 069a79f4-44e9-4726-a5be-fca90e38aaf5
+[10:03:11] [Server thread/INFO]: Steve joined the game
+[10:03:11] [Server thread/INFO]: Steve[/203.0.113.7:51234] logged in with entity id 154 at ([world]12.5, 64.0, -3.5)
+[10:03:40] [Async Chat Thread - #0/INFO]: <Steve> my client threw a NullPointerException lol
+[10:03:42] [Async Chat Thread - #0/INFO]: [Not Secure] <Steve> also java.lang.OutOfMemoryError: Java heap space on my pc
+[10:03:45] [Server thread/INFO]: Steve issued server command: /say Error occurred while enabling the party
+[10:03:45] [Server thread/INFO]: [Server] Error occurred while enabling the party
+[10:05:00] [Server thread/INFO]: Steve lost connection: Timed out
+[10:05:00] [Server thread/INFO]: Steve left the game
+[10:06:00] [Server thread/INFO]: Alex lost connection: Disconnected
+[11:00:00] [Server thread/INFO]: Stopping the server
+[11:00:00] [Server thread/INFO]: Stopping server
+[11:00:00] [Server thread/INFO]: [Essentials] Disabling Essentials v2.20.1
+[11:00:00] [Server thread/INFO]: [ErrorLogger] Disabling ErrorLogger v1.0.0
+[11:00:00] [Server thread/INFO]: [LuckPerms] Disabling LuckPerms v5.4.102
+[11:00:01] [Server thread/INFO]: Saving players
+[11:00:01] [Server thread/INFO]: Saving worlds
+[11:00:01] [Server thread/INFO]: Saving chunks for level 'ServerLevel[world]'/minecraft:overworld
+[11:00:02] [Server thread/INFO]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[11:00:02] [Server thread/INFO]: Flushing Chunk IO
+[11:00:02] [Server thread/INFO]: Closing Thread Pool
+[11:00:02] [Server thread/INFO]: Closing Server

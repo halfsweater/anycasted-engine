@@ -1,0 +1,9 @@
+[07:30:00 ERROR]: [ChatControl] Could not load config.yml
+org.bukkit.configuration.InvalidConfigurationException: while parsing a block mapping
+ in 'reader', line 14, column 3:
+      format: "&7[&bChat&7]"
+      ^
+expected <block end>, but found '<block mapping start>'
+ in 'reader', line 16, column 5:
+        enabled: true
+        ^

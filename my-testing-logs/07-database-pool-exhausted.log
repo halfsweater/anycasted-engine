@@ -1,0 +1,4 @@
+[21:05:09 WARN]: [Ranks] Failed to obtain a database connection within 30000ms.
+com.zaxxer.hikari.pool.HikariPool$PoolInitializationException: Failed to initialize pool: Connection timed out
+Caused by: java.sql.SQLTransientConnectionException: HikariPool-1 - Connection is not available, request timed out after 30000ms.
+[21:05:09 ERROR]: [Ranks] Could not save player data for UUID 00000000-0000-0000-0000-000000000001

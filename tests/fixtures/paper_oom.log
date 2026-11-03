@@ -1,0 +1,23 @@
+[09:59:58] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.2+13-LTS; Eclipse Adoptium Temurin-21.0.2+13) on Linux 6.1.0-18-amd64 (amd64)
+[09:59:58] [ServerMain/INFO]: [bootstrap] Loading Paper 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) for Minecraft 1.20.4
+[09:59:59] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[10:00:00] [ServerMain/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[10:00:02] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:00:03] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[10:00:03] [Server thread/INFO]: Loading properties
+[10:00:03] [Server thread/INFO]: This server is running Paper version 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) (Implementing API version 1.20.4-R0.1-SNAPSHOT)
+[10:00:03] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:00:03] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:00:04] [Server thread/INFO]: Default game type: SURVIVAL
+[10:00:04] [Server thread/INFO]: Generating keypair
+[10:00:04] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:00:04] [Server thread/INFO]: Using epoll channel type
+[10:00:10] [Server thread/INFO]: Done (6.000s)! For help, type "help"
+[13:59:01] [Server thread/WARN]: Can't keep up! Is the server overloaded? Running 12034ms or 240 ticks behind
+[13:59:30] [Server thread/ERROR]: Encountered an unexpected exception
+java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3537) ~[?:?]
+	at net.minecraft.world.level.chunk.LevelChunk.<init>(LevelChunk.java:93) ~[paper-1.20.4.jar:git-Paper-496]
+	at com.example.mapper.RenderTask.snapshot(RenderTask.java:51) ~[DynMapper-2.0.jar:?]
+Exception in thread "Craft Scheduler Thread - 31" java.lang.OutOfMemoryError: Java heap space
+Exception in thread "Netty Epoll Server IO #2" java.lang.OutOfMemoryError: Java heap space

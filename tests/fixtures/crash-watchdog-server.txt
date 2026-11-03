@@ -1,0 +1,25 @@
+---- Minecraft Crash Report ----
+// I just don't know what went wrong :(
+
+Time: 2024-05-02 03:14:15
+Description: Watching Server
+
+java.lang.Error: Watchdog
+	at java.base/java.lang.Object.wait0(Native Method)
+	at net.minecraft.server.MinecraftServer.waitUntilNextTick(MinecraftServer.java:790)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server Watchdog
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.4
+	Operating System: Linux (amd64) version 5.15.0
+	Java Version: 17.0.10, Eclipse Adoptium
+	Memory: 2147483648 bytes (2048 MiB) / 4294967296 bytes (4096 MiB) up to 8589934592 bytes (8192 MiB)
+	Is Modded: Probably not. Server jar signature and brand is untouched
+	Suspected Mods: None

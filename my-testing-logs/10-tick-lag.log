@@ -1,0 +1,4 @@
+[18:00:00 WARN]: Can't keep up! Is the server overloaded? Running 2450ms or 49 ticks behind
+[18:00:05 WARN]: Can't keep up! Is the server overloaded? Running 5100ms or 102 ticks behind
+[18:00:10 INFO]: [Spark] TPS: 8.7 (1m), 12.4 (5m), 18.9 (15m)
+[18:00:10 INFO]: [Spark] MSPT: 145.2 (min), 238.7 (median), 612.4 (95th percentile)

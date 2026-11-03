@@ -1,0 +1,48 @@
+---- Minecraft Crash Report ----
+// Who set us up the TNT?
+
+Time: 2024-04-21 18:03:11
+Description: Ticking entity
+
+java.lang.NullPointerException: Cannot invoke "org.bukkit.entity.Player.getLocation()" because "target" is null
+	at com.example.petsplus.PetBrain.follow(PetBrain.java:88)
+	at com.example.petsplus.PetBrain.tick(PetBrain.java:40)
+	at net.minecraft.world.entity.Mob.tick(Mob.java:340)
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:1301)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Server thread
+Suspected Mod: NONE
+Stacktrace:
+	at com.example.petsplus.PetBrain.follow(PetBrain.java:88)
+
+-- Entity being ticked --
+Details:
+	Entity Type: minecraft:wolf (net.minecraft.world.entity.animal.Wolf)
+	Entity ID: 8812
+	Entity Name: Rex
+	Entity's Exact location: 104.50, 71.00, -233.18
+	Entity's Block location: World: (104,71,-234), Section: (at 8,7,6 in 6,4,-15; chunk contains blocks 96,-64,-240 to 111,319,-225)
+Stacktrace:
+	at net.minecraft.server.level.ServerLevel.tickNonPassenger(ServerLevel.java:1301)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.20.4
+	Minecraft Version ID: 1.20.4
+	Operating System: Linux (amd64) version 6.1.0-18-amd64
+	Java Version: 21.0.2, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 157286400 bytes (150 MiB) / 4294967296 bytes (4096 MiB) up to 4294967296 bytes (4096 MiB)
+	CPUs: 4
+	JVM Flags: 3 total; -Xms4G -Xmx4G -XX:+UseG1GC
+	CraftBukkit Information: 
+		BrandInfo: Paper (papermc:paper) version 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) [Mod Loader]
+		Running: Paper version 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) (Implementing API version 1.20.4-R0.1-SNAPSHOT) true
+		Plugins: { LuckPerms v5.4.102 me.lucko.luckperms.bukkit.loader.BukkitLoaderPlugin [Luck], PetsPlus v2.3.1 com.example.petsplus.PetsPlus [Example Dev]}
+	Server Running: true
+	Is Modded: Definitely; Server brand changed to 'Paper'

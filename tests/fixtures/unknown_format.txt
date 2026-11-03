@@ -1,0 +1,4 @@
+Shopping list
+- eggs
+- milk (there was an error in last week's order)
+Remember: the exception proves the rule.

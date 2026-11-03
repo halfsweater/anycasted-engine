@@ -1,0 +1,5 @@
+[14:33:51 INFO]: [connected player] Alex (/203.0.113.15) has connected
+[14:33:51 ERROR]: [server connection] Alex -> survival: Exception connecting to backend server
+com.velocitypowered.proxy.connection.client.ConnectedPlayer$ConnectionRequestBuilder$ConnectionRequestException: Backend server is online-mode but proxy forwarding is configured incorrectly
+Caused by: java.lang.IllegalStateException: This server requires you to connect with Velocity modern forwarding.
+[14:33:51 INFO]: [connected player] Alex (/203.0.113.15) has disconnected

@@ -1,0 +1,4 @@
+[10:00:00 INFO]: Starting Minecraft server on 0.0.0.0:25565
+[10:00:00 ERROR]: Failed to bind to port!
+java.net.BindException: Address already in use: bind
+[10:00:00 ERROR]: Perhaps a server is already running on that port?

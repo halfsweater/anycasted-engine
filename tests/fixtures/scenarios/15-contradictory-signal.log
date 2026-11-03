@@ -1,0 +1,5 @@
+[11:00:00 INFO]: [Server] Done (6.201s)! For help, type "help"
+[11:01:03 ERROR]: [ExamplePlugin] Could not connect to database: Access denied for user 'mc_user'@'10.0.0.5'
+[11:01:04 INFO]: [ExamplePlugin] Retrying database connection in 10 seconds
+[11:01:14 INFO]: [ExamplePlugin] Database connection established successfully
+[11:02:00 WARN]: [ExamplePlugin] 3 player records remain queued for retry

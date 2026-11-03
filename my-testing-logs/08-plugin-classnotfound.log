@@ -1,0 +1,6 @@
+[09:10:00 ERROR]: [ScoreboardX] Error occurred while enabling ScoreboardX v3.0
+java.lang.NoClassDefFoundError: com/example/api/PlaceholderBridge
+    at com.example.scoreboard.ScoreboardPlugin.onEnable(ScoreboardPlugin.java:62) ~[ScoreboardX-3.0.jar:?]
+Caused by: java.lang.ClassNotFoundException: com.example.api.PlaceholderBridge
+    at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+[09:10:00 INFO]: [ScoreboardX] Disabling ScoreboardX v3.0

@@ -1,0 +1,9 @@
+2015-06-01 18:00:00 [INFO] Starting minecraft server version 1.8.8
+2015-06-01 18:00:00 [INFO] This server is running CraftBukkit version git-Spigot-db6de12-18fbb24 (MC: 1.8.8) (Implementing API version 1.8.8-R0.1-SNAPSHOT)
+2015-06-01 18:00:01 [SEVERE] Could not load 'plugins/OldWarps.jar' in folder 'plugins'
+org.bukkit.plugin.InvalidDescriptionException: Invalid plugin.yml
+	at org.bukkit.plugin.java.JavaPluginLoader.getPluginDescription(JavaPluginLoader.java:152)
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:133)
+Caused by: java.io.FileNotFoundException: Jar does not contain plugin.yml
+	... 8 more
+2015-06-01 18:00:03 [INFO] Done (2.540s)! For help, type "help" or "?"

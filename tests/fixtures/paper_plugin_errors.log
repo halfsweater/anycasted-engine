@@ -1,0 +1,79 @@
+[09:59:58] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.2+13-LTS; Eclipse Adoptium Temurin-21.0.2+13) on Linux 6.1.0-18-amd64 (amd64)
+[09:59:58] [ServerMain/INFO]: [bootstrap] Loading Paper 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) for Minecraft 1.20.4
+[09:59:59] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[10:00:00] [ServerMain/INFO]: [PluginInitializerManager] Initialized 4 plugins
+[10:00:02] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
+[10:00:03] [Server thread/INFO]: Starting minecraft server version 1.20.4
+[10:00:03] [Server thread/INFO]: Loading properties
+[10:00:03] [Server thread/INFO]: This server is running Paper version 1.20.4-496-master@7ac24a1 (2024-04-21T00:00:00Z) (Implementing API version 1.20.4-R0.1-SNAPSHOT)
+[10:00:03] [Server thread/INFO]: Server Ping Player Sample Count: 12
+[10:00:03] [Server thread/INFO]: Using 4 threads for Netty based IO
+[10:00:04] [Server thread/INFO]: Default game type: SURVIVAL
+[10:00:04] [Server thread/INFO]: Generating keypair
+[10:00:04] [Server thread/INFO]: Starting Minecraft server on *:25565
+[10:00:04] [Server thread/INFO]: Using epoll channel type
+[10:00:05] [Server thread/ERROR]: Could not load 'plugins/EconomyShop-2.1.0.jar' in folder 'plugins'
+org.bukkit.plugin.UnknownDependencyException: Unknown/missing dependency plugins: [Vault]. Please download and install these plugins to run 'EconomyShop'.
+	at org.bukkit.plugin.SimplePluginManager.loadPlugins(SimplePluginManager.java:301) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at org.bukkit.craftbukkit.v1_20_R3.CraftServer.loadPlugins(CraftServer.java:503) ~[paper-1.20.4.jar:git-Paper-496]
+	at net.minecraft.server.dedicated.DedicatedServer.initServer(DedicatedServer.java:275) ~[paper-1.20.4.jar:git-Paper-496]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[10:00:05] [Server thread/INFO]: [LuckPerms] Loading server plugin LuckPerms v5.4.102
+[10:00:05] [Server thread/INFO]: [WelcomePlus] Loading server plugin WelcomePlus v1.4.2
+[10:00:06] [Server thread/INFO]: Preparing level "world"
+[10:00:09] [Server thread/INFO]: [LuckPerms] Enabling LuckPerms v5.4.102
+[10:00:09] [Server thread/INFO]: [WelcomePlus] Enabling WelcomePlus v1.4.2
+[10:00:09] [Server thread/ERROR]: Error occurred while enabling WelcomePlus v1.4.2 (Is it up to date?)
+java.lang.NoClassDefFoundError: me/clip/placeholderapi/PlaceholderAPI
+	at com.example.welcomeplus.WelcomePlus.onEnable(WelcomePlus.java:58) ~[WelcomePlus-1.4.2.jar:?]
+	at org.bukkit.plugin.java.JavaPlugin.setEnabled(JavaPlugin.java:288) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+Caused by: java.lang.ClassNotFoundException: me.clip.placeholderapi.PlaceholderAPI
+	at org.bukkit.plugin.java.PluginClassLoader.loadClass0(PluginClassLoader.java:197) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[?:?]
+	... 3 more
+[10:00:10] [Server thread/INFO]: Done (7.211s)! For help, type "help"
+[10:10:00] [User Authenticator #0/INFO]: UUID of player Steve is 069a79f4-44e9-4726-a5be-fca90e38aaf0
+[10:10:00] [Server thread/ERROR]: Could not pass event PlayerJoinEvent to WelcomePlus v1.4.2
+java.lang.NullPointerException: Cannot invoke "org.bukkit.configuration.ConfigurationSection.getString(String)" because "section" is null
+	at com.example.welcomeplus.listener.JoinListener.onJoin(JoinListener.java:42) ~[WelcomePlus-1.4.2.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor12.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:81) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:git-Paper-496]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.20.4.jar:git-Paper-496]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[10:10:00] [Server thread/INFO]: Steve joined the game
+[10:11:01] [User Authenticator #1/INFO]: UUID of player Alex is 069a79f4-44e9-4726-a5be-fca90e38aaf1
+[10:11:01] [Server thread/ERROR]: Could not pass event PlayerJoinEvent to WelcomePlus v1.4.2
+java.lang.NullPointerException: Cannot invoke "org.bukkit.configuration.ConfigurationSection.getString(String)" because "section" is null
+	at com.example.welcomeplus.listener.JoinListener.onJoin(JoinListener.java:42) ~[WelcomePlus-1.4.2.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor12.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:81) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:git-Paper-496]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.20.4.jar:git-Paper-496]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[10:11:01] [Server thread/INFO]: Alex joined the game
+[10:12:02] [User Authenticator #2/INFO]: UUID of player Notch is 069a79f4-44e9-4726-a5be-fca90e38aaf2
+[10:12:02] [Server thread/ERROR]: Could not pass event PlayerJoinEvent to WelcomePlus v1.4.2
+java.lang.NullPointerException: Cannot invoke "org.bukkit.configuration.ConfigurationSection.getString(String)" because "section" is null
+	at com.example.welcomeplus.listener.JoinListener.onJoin(JoinListener.java:42) ~[WelcomePlus-1.4.2.jar:?]
+	at com.destroystokyo.paper.event.executor.asm.generated.GeneratedEventExecutor12.execute(Unknown Source) ~[?:?]
+	at org.bukkit.plugin.EventExecutor$2.execute(EventExecutor.java:77) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at co.aikar.timings.TimedEventExecutor.execute(TimedEventExecutor.java:81) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:git-Paper-496]
+	at org.bukkit.plugin.RegisteredListener.callEvent(RegisteredListener.java:70) ~[paper-api-1.20.4-R0.1-SNAPSHOT.jar:?]
+	at io.papermc.paper.plugin.manager.PaperEventManager.callEvent(PaperEventManager.java:54) ~[paper-1.20.4.jar:git-Paper-496]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[?:?]
+[10:12:02] [Server thread/INFO]: Notch joined the game
+[10:20:00] [Craft Scheduler Thread - 7 - TreeFeller/WARN]: [TreeFeller] Plugin TreeFeller v3.0 generated an exception while executing task 812
+java.lang.IllegalStateException: Asynchronous chunk load!
+	at org.spigotmc.AsyncCatcher.catchOp(AsyncCatcher.java:14) ~[paper-1.20.4.jar:git-Paper-496]
+	at net.minecraft.server.level.ServerChunkCache.getChunk(ServerChunkCache.java:211) ~[?:?]
+	at com.example.treefeller.FellTask.run(FellTask.java:31) ~[TreeFeller-3.0.jar:?]
+	at org.bukkit.craftbukkit.v1_20_R3.scheduler.CraftTask.run(CraftTask.java:101) ~[paper-1.20.4.jar:git-Paper-496]
+[10:21:00] [Async Chat Thread - #3/INFO]: <Alex> whoa java.lang.OutOfMemoryError lol
+[10:30:00] [Server thread/INFO]: Stopping the server
+[10:30:00] [Server thread/INFO]: Stopping server
+[10:30:00] [Server thread/INFO]: [WelcomePlus] Disabling WelcomePlus v1.4.2
+[10:30:01] [Server thread/INFO]: Closing Server

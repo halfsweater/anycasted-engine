@@ -1,0 +1,4 @@
+[08:00:01 INFO]: This server is running Paper version 1.21.1-123 (MC: 1.21.1)
+[08:00:02 ERROR]: [OldCombat] Plugin OldCombat v1.4 does not support this server version.
+[08:00:02 WARN]: [OldCombat] Disabling OldCombat v1.4 due to unsupported Minecraft version.
+[08:00:02 INFO]: Done (5.102s)! For help, type "help"
