@@ -1,0 +1,31 @@
+[package]
+name = "anycasted-api"
+description = "HTTP API for the Anycasted Diagnostics Engine"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "anycasted-api"
+path = "src/main.rs"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+anycasted-engine.workspace = true
+axum = { version = "0.8", features = ["multipart"] }
+tokio = { workspace = true, features = ["rt-multi-thread", "net", "signal"] }
+serde = { workspace = true }
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+
+[dev-dependencies]
+tower = { version = "0.5", features = ["util"] }
+http-body-util = "0.1"
+
+[lints]
+workspace = true
