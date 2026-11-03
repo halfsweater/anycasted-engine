@@ -82,8 +82,52 @@ let json = anycasted_engine::reports::to_json_pretty(&report)?;
 
 `Engine` is `Clone + Send + Sync`. With the `async` feature,
 `Engine::analyze_path_async` runs analysis on Tokio's blocking pool. That is the intended
-integration point for the future Axum API layer, which should live in its own crate and
-not inside the engine. See `examples/analyze_file.rs`.
+integration point for embedding the engine in async services; the HTTP API below is
+built on the same `Engine`. See `examples/analyze_file.rs`.
+
+## HTTP API
+
+`crates/anycasted-api` wraps the engine in an Axum server (`anycasted-api` binary).
+
+```bash
+cargo build --release -p anycasted-api
+ANYCASTED_API_KEY=change-me ./target/release/anycasted-api      # listens on 127.0.0.1:8080
+```
+
+| Method | Path | Description |
+|---|---|---|
+| `GET` | `/health` | Liveness check (no auth) |
+| `GET` | `/v1/version` | Engine and report schema versions |
+| `GET` | `/v1/rules` | Rule catalog (JSON) |
+| `POST` | `/v1/analyze` | Analyze a log, `.gz` or crash report |
+
+`POST /v1/analyze` accepts the file as the raw request body or as a multipart field named
+`file`. Query parameters: `filename` (display name for raw uploads), `format=json|text`
+(default `json`, the same report schema as the CLI), `verbose=true` (text only).
+
+```bash
+# raw body
+curl -H "Authorization: Bearer change-me" --data-binary @latest.log \
+  "http://localhost:8080/v1/analyze?filename=latest.log"
+# multipart upload, human-readable result
+curl -H "Authorization: Bearer change-me" -F file=@latest.log.gz \
+  "http://localhost:8080/v1/analyze?format=text"
+```
+
+Errors are JSON: `{"error": {"code": "...", "message": "..."}}` with status `400` (empty or
+malformed body), `401` (bad API key), `413` (too large), `422` (unsupported input, e.g.
+binary).
+
+| Variable | Default | Meaning |
+|---|---|---|
+| `ANYCASTED_ADDR` | `127.0.0.1:8080` | Listen address (`0.0.0.0:8080` to expose it) |
+| `ANYCASTED_API_KEY` | unset | Require `Authorization: Bearer <key>` on `/v1/*` |
+| `ANYCASTED_MAX_UPLOAD_MIB` | `64` | Maximum upload size (uploads are held in memory) |
+| `ANYCASTED_MAX_CONCURRENT` | CPU count | Analyses run at once; extra requests wait |
+| `ANYCASTED_LOG` | `info` | `error`, `warn`, `info` or `debug` |
+
+The server speaks plain HTTP; put it behind a TLS-terminating reverse proxy (Caddy, nginx)
+before exposing it to the internet.
 
 ## Architecture
 
@@ -97,7 +141,8 @@ anycasted-engine/              root crate: the pipeline (`Engine`) wiring the st
 │   ├── anycasted-detection    rule framework + built-in rules + attribution
 │   ├── anycasted-analysis     grouping/fingerprinting, correlation, scoring
 │   ├── anycasted-reports      JSON and terminal rendering
-│   └── anycasted-cli          `anycasted` binary
+│   ├── anycasted-cli          `anycasted` binary
+│   └── anycasted-api          `anycasted-api` HTTP server (Axum)
 ├── tests/                     integration tests + fixtures
 └── examples/
 ```
@@ -339,7 +384,6 @@ Spigot, two crash reports, an empty file and non-log text.
 
 ## Not yet implemented
 
-- The Axum API layer (planned as a separate crate on top of `Engine`).
 - Mod-specific rules for Forge/Fabric (their line syntax is parsed and identified, but
   rules target Bukkit-family servers and Velocity). No BungeeCord-specific markers.
 - `hs_err_pid*.log` JVM crash files and Paper thread-dump analysis beyond detecting the
